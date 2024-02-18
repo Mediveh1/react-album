@@ -4,10 +4,15 @@
 
 This is a React project to display pictures from the picsum API as an album
 
-## visual 
+## visual example 
+
+https://github.com/Mediveh1/react-album/assets/122058294/5e402a0b-cd22-48b3-8260-5f31b94bf415
 
 
-
+## Future work
+-Better UI
+- Move between pics
+- Save pics to your album
 
 
 
