@@ -1,8 +1,10 @@
 # React Album
 
-##About the project
+## About the project
 
 This is a React project to display pictures from the picsum API as an album
+
+## visual 
 
 
 
