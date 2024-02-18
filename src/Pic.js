@@ -8,32 +8,25 @@ import "./index.css"
 export default function Pic (){
     const something=useLocation()
     const s = something.pathname.split('/');
-    const id = s[s.length - 1];
-
+    var id = s[s.length - 1];
     const [img, setImg] = useState("")
 
 
-
-
     useEffect(() => {
-        const fetchedData = async () => {
-            const response = await fetch(
-                `https://picsum.photos/id/${id}/info`
-            );
-            const response1= await response.json()
+            const fetchedData = async () => {
+                const response = await fetch(
+                    `https://picsum.photos/id/${id}/info`
+                );
+                const response1= await response.json()
+
+                setImg(response1);
 
 
-
-            setImg(response1);
-            console.log(response1)
-
-
+            };
+            fetchedData();
+        }, [id])
 
 
-
-        };
-        fetchedData();
-    }, [id])
 
     return (
         <div>
@@ -41,22 +34,18 @@ export default function Pic (){
 
             <div className="container">
 
-                   <div className="col">
-                       {
-                           img && <img className="selected-image" src={img.download_url}/>
-                       }
-                   </div>
-
-                   <div className="col">
                        <div className="author">
                            <h1>Author</h1>
                            {
                                img && <h3>{img.author}</h3>
                            }
                        </div>
-                   </div>
 
-
+                <div className="column">
+                    {
+                        img && <img className="selected-image" src={img.download_url}/>
+                    }
+                </div>
 
             </div>
 

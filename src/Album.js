@@ -11,7 +11,7 @@ function Album() {
     useEffect(() => {
         const fetchedData = async () => {
             const response = await fetch(
-                `https://picsum.photos/v2/list?page=${pages}&limit=10`
+                `https://picsum.photos/v2/list?page=${pages}&limit=8`
             );
             const data = await response.json();
             setPics((prev) => [...prev, ...data]);
